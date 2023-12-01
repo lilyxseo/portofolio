@@ -1,7 +1,7 @@
 async function sendMessageToTelegram() {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+  const name = '123';
+  const email = '123';
+  const message = '123';
 
   const BOT_TOKEN = "5504406578:AAFkfXqs2IFMWCbef4dWeVpekl-9jlzXu1Y";
   const CHAT_ID = "1423280039"; // Ganti dengan ID obrolan atau pengguna Telegram yang dituju
@@ -29,7 +29,11 @@ async function sendMessageToTelegram() {
     const responseData = await response.json();
 
     if (responseData.ok) {
-      alert("Pesan berhasil dikirim ke Telegram!");
+      // Menampilkan toast
+      showToast();
+
+      // Mengosongkan formulir setelah berhasil dikirim
+      document.getElementById("telegramForm").reset();
     } else {
       alert("Gagal mengirim pesan ke Telegram.");
     }
@@ -37,6 +41,13 @@ async function sendMessageToTelegram() {
     console.error("Error sending message:", error);
     alert("Terjadi kesalahan saat mengirim pesan ke Telegram.");
   }
+}
+
+// Fungsi untuk menampilkan toast
+function showToast() {
+  const toastElement = document.getElementById("toast");
+  const toast = new bootstrap.Toast(toastElement);
+  toast.show();
 }
 
 // Menanggapi formulir saat dikirim

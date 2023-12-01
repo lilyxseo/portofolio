@@ -483,6 +483,7 @@ body {
 }
 
 .btn-message:hover {
+  color: #fff;
   background-color: var(--secondary-color);
 }
 
@@ -494,7 +495,6 @@ body {
 .btn-message:active {
   color: var(--secondary-color) !important;
   background-color: var(--navter) !important;
-  border: 2px solid var(--secondary-color) !important;
 }
 
 .btn-message:active a {
@@ -527,6 +527,45 @@ body {
 
 textarea {
   resize: none;
+}
+
+.toast {
+  position: fixed;
+  border: 0.5px solid var(--navterder);
+  padding: 5px;
+  bottom: 83px;
+  box-shadow: none;
+  right: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  background-color: var(--navter); /* Warna hijau untuk kesuksesan */
+  color: var(--font-sec);
+  max-width: 320px;
+}
+
+.toast-body {
+  padding: 7px;
+  padding-right: 0;
+}
+
+.toast p {
+  margin-bottom: 0;
+  line-height: 18px;
+  /* width: 30px; */
+}
+
+.icon-toast {
+  width: 22px!important;
+  height: 22px!important;
+  color: #198754;
+}
+
+.icon-toast i {
+  font-size: 1.2rem;
+}
+
+.toast span p {
+  padding-left: 10px;
 }
 
 /* Navbar Mobile */
