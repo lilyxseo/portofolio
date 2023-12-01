@@ -87,13 +87,13 @@ body {
 }
 
 .btn-cv:active {
-  color: var(--secondary-color)!important;
-  background-color: var(--navter)!important;
-  border: 2px solid var(--secondary-color)!important;
+  color: var(--secondary-color) !important;
+  background-color: var(--navter) !important;
+  border: 2px solid var(--secondary-color) !important;
 }
 
 .btn-cv:active a {
-  color: var(--secondary-color)!important;
+  color: var(--secondary-color) !important;
 }
 
 .btn-cv a {
@@ -186,7 +186,7 @@ body {
   .intro {
     justify-content: center;
     align-items: center !important;
-    margin-top: 24px!important;
+    margin-top: 24px !important;
   }
 }
 
@@ -492,13 +492,13 @@ body {
 }
 
 .btn-message:active {
-  color: var(--secondary-color)!important;
-  background-color: var(--navter)!important;
-  border: 2px solid var(--secondary-color)!important;
+  color: var(--secondary-color) !important;
+  background-color: var(--navter) !important;
+  border: 2px solid var(--secondary-color) !important;
 }
 
 .btn-message:active a {
-  color: var(--secondary-color)!important;
+  color: var(--secondary-color) !important;
 }
 
 .btn-message:hover a {
