@@ -111,6 +111,8 @@ body {
   padding: 10px;
   background-color: var(--navter);
   border-radius: 50%;
+  width: 250px;
+  height: auto;
 }
 
 @-webkit-keyframes wave-animation {
