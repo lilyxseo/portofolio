@@ -5,7 +5,7 @@ secondary : var(--secondary-color)
 another : var(--navterder) 
 */
 :root {
-  --primary-color: #916EF2;
+  --primary-color: #7950f2;
   --secondary-color: #a88bff;
   --body: #f8f9fa;
   --navter: #fff;
