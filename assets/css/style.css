@@ -107,7 +107,7 @@ body {
 }
 
 .my-pic {
-  border: 5px solid var(--primary-color);
+  border: 5px solid var(--secondary-color);
   padding: 10px;
   background-color: var(--navter);
   border-radius: 50%;
