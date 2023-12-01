@@ -5,7 +5,11 @@
       "destination": "/:path*"
     },
     {
-      "source": "/:path*.(html|svg)",
+      "source": "/:path*/",
+      "destination": "/:path*"
+    },
+    {
+      "source": "/:path*.(html|json|xml|...)",
       "destination": "/:path*"
     }
   ]
