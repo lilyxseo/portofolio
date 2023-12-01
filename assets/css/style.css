@@ -115,6 +115,11 @@ body {
   height: auto;
 }
 
+.pic-about {
+  width: 250px;
+  height: auto;
+}
+
 @-webkit-keyframes wave-animation {
   0% {
     transform: rotate(0deg);
