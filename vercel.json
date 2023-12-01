@@ -16,22 +16,5 @@
       "status": 404,
       "dest": "/404.html"
     }
-  ],
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/$1"
-      }
-    ],
-    "headers": [
-      {
-        "source": "/(.*)\\.svg",
-        "headers": [
-          {
-            "key": "Content-Type",
-            "value": "image/svg+xml"
-          }
-        ]
-      }
-    ]
-  }
+  ]
+}
