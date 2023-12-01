@@ -87,16 +87,27 @@ TxtType.prototype.tick = function () {
 
 window.onload = function () {
   var elements = document.querySelectorAll(".wrap");
-  for (var i = 0; i < elements.length; i++) {
-    var toRotate = elements[i].textContent;
-    var period = elements[i].getAttribute("data-period");
+  var currentIndex = 0;
+
+  function typeNext() {
+    var toRotate = elements[currentIndex].textContent;
+    var period = elements[currentIndex].getAttribute("data-period");
+
     if (toRotate) {
-      // Perbaikan: Memulai efek ketik pada setiap elemen secara berurutan
-      setTimeout(function (element, toRotate, period) {
-        new TxtType(element, toRotate.split(','), period);
-      }, i * /* set waktu tunda */ 1000, elements[i], toRotate, period);
+      new TxtType(elements[currentIndex], toRotate.split(','), period);
+    }
+
+    currentIndex++;
+
+    if (currentIndex < elements.length) {
+      // Perbaikan: Memulai efek ketik pada elemen berikutnya setelah selesai pada elemen saat ini
+      setTimeout(typeNext, /* set waktu tunda */ 1000);
     }
   }
+
+  // Mulai efek ketik pada elemen pertama
+  typeNext();
+
 
   var css = document.createElement("style");
   css.type = "text/css";
