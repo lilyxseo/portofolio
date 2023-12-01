@@ -262,6 +262,15 @@ body {
   .nav-tabs .nav-link.active {
     padding-bottom: 5px !important;
   }
+
+  .toast {
+    max-width: 290px!important;
+    margin: 0!important;
+  }
+
+  .toast-body {
+    padding: 7px!important;
+  }
 }
 #hero {
   height: 80vh;
