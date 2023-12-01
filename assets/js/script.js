@@ -86,12 +86,15 @@ TxtType.prototype.tick = function () {
 };
 
 window.onload = function () {
-  var elements = document.getElementsByClassName("typewrite");
+  var elements = document.querySelectorAll(".wrap");
   for (var i = 0; i < elements.length; i++) {
-    var toRotate = elements[i].getAttribute("data-type");
+    var toRotate = elements[i].textContent;
     var period = elements[i].getAttribute("data-period");
     if (toRotate) {
-      new TxtType(elements[i], JSON.parse(toRotate), period);
+      // Perbaikan: Memulai efek ketik pada setiap elemen secara berurutan
+      setTimeout(function (element, toRotate, period) {
+        new TxtType(element, toRotate.split(','), period);
+      }, i * /* set waktu tunda */ 1000, elements[i], toRotate, period);
     }
   }
 
