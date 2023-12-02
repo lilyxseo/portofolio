@@ -47,16 +47,25 @@ LX Zone
     if (response.ok) {
       // Menampilkan toast pesan berhasil
       showToast("Pesan berhasil terkirim, terima kasih sudah menghubungi saya");
+
+      // Membersihkan formulir setelah pesan berhasil terkirim
+      document.getElementById("telegramForm").reset();
     } else {
       // Menampilkan toast pesan gagal bersama dengan pesan kesalahan dari respons
       showToast(
         `Gagal mengirim pesan ke Telegram. ${responseData.description}`
       );
+
+      // Membersihkan formulir setelah pesan berhasil terkirim
+      document.getElementById("telegramForm").reset();
     }
   } catch (error) {
     console.error("Error sending message:", error);
     // Menampilkan toast pesan gagal
     showToast("Terjadi kesalahan saat mengirim pesan ke Telegram.");
+
+    // Membersihkan formulir setelah pesan berhasil terkirim
+    document.getElementById("telegramForm").reset();
   }
 }
 
