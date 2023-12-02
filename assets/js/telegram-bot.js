@@ -1,17 +1,33 @@
+// Fungsi untuk mengirim pesan ke Telegram
 async function sendMessageToTelegram() {
-  const name = '123';
-  const email = '123';
-  const message = '123';
+  // Mengambil nilai dari input formulir
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  // Validasi sederhana, pastikan nilai name, email, dan message tidak kosong
+  if (!name || !email || !message) {
+    alert("Silakan lengkapi semua kolom formulir.");
+    return;
+  }
 
   const BOT_TOKEN = "5504406578:AAFkfXqs2IFMWCbef4dWeVpekl-9jlzXu1Y";
   const CHAT_ID = "1423280039"; // Ganti dengan ID obrolan atau pengguna Telegram yang dituju
 
   const apiUrl = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
+  // Escape karakter '.' di dalam pesan
+  const encodedMessage = encodeURIComponent(message);
+
+  // Modifikasi teks untuk menggunakan format Markdown (membuat teks bold)
   const text = `
-      Nama: ${name}
-      Email: ${email}
-      Pesan: ${message}
+  Message from bydrz.com
+
+Nama: ${name}
+Email: ${email}
+Pesan: ${message}
+
+LX Zone
     `;
 
   try {
@@ -28,24 +44,35 @@ async function sendMessageToTelegram() {
 
     const responseData = await response.json();
 
-    if (responseData.ok) {
-      // Menampilkan toast
-      showToast();
-
-      // Mengosongkan formulir setelah berhasil dikirim
-      document.getElementById("telegramForm").reset();
+    if (response.ok) {
+      // Menampilkan toast pesan berhasil
+      showToast("Pesan berhasil terkirim, terima kasih sudah menghubungi saya");
     } else {
-      alert("Gagal mengirim pesan ke Telegram.");
+      // Menampilkan toast pesan gagal bersama dengan pesan kesalahan dari respons
+      showToast(
+        `Gagal mengirim pesan ke Telegram. ${responseData.description}`
+      );
     }
   } catch (error) {
     console.error("Error sending message:", error);
-    alert("Terjadi kesalahan saat mengirim pesan ke Telegram.");
+    // Menampilkan toast pesan gagal
+    showToast("Terjadi kesalahan saat mengirim pesan ke Telegram.");
   }
 }
 
 // Fungsi untuk menampilkan toast
-function showToast() {
+function showToast(message) {
   const toastElement = document.getElementById("toast");
+  const toastBody = toastElement.querySelector(".toast-body p");
+  const toastIcon = toastElement.querySelector(".icon-toast i");
+
+  // Menetapkan pesan dan ikon pada toast
+  toastBody.textContent = message;
+  toastIcon.className = message.includes("berhasil")
+    ? "fa-solid fa-circle-check text-success"
+    : "fa-solid fa-circle-exclamation text-danger";
+
+  // Membuka toast
   const toast = new bootstrap.Toast(toastElement);
   toast.show();
 }
