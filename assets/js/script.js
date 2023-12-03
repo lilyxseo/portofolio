@@ -132,3 +132,30 @@ var images = document.getElementsByClassName("no-contextmenu");
 for (var i = 0; i < images.length; i++) {
   images[i].setAttribute("oncontextmenu", "return false;");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var lazyImages = document.querySelectorAll(".lazy-load-image");
+
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove("lazy-load-image");
+          observer.unobserve(img);
+        }
+      });
+    });
+
+    lazyImages.forEach(function (img) {
+      observer.observe(img);
+    });
+  } else {
+    // Fallback for browsers that don't support IntersectionObserver
+    lazyImages.forEach(function (img) {
+      img.src = img.dataset.src;
+      img.classList.remove("lazy-load-image");
+    });
+  }
+});
