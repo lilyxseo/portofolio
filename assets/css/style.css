@@ -55,6 +55,8 @@ body {
 .text-muted {
   opacity: 1;
   color: var(--font-sec) !important;
+  font-size: .9rem;
+  font-weight: 400;
 }
 
 .typewrite {
