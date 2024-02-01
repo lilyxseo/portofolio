@@ -2,12 +2,8 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/404",
-      "destination": "/404.html"
-    },
-    {
       "source": "/(.*)",
-      "destination": "/"
+      "destination": "/404.html"
     }
   ]
 }
