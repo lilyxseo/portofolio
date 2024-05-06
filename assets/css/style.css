@@ -12,7 +12,7 @@ another : var(--navterder)
   --navterder: #e9ecef;
   --font: #212529;
   --font-sec: #212529bf;
-  --navtext: #6D757D;
+  --navtext: #6d757d;
   --title: #212529;
 }
 
@@ -37,6 +37,14 @@ body {
 
 /* Index */
 
+.text-justify {
+  text-align: justify;
+}
+
+.italic {
+  font-style: italic;
+}
+
 .title {
   color: var(--title);
 }
@@ -55,7 +63,7 @@ body {
 .text-muted {
   opacity: 1;
   color: var(--font-sec) !important;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -273,12 +281,12 @@ body {
   }
 
   .toast {
-    max-width: 280px!important;
-    margin: 0!important;
+    max-width: 280px !important;
+    margin: 0 !important;
   }
 
   .toast-body {
-    padding: 7px!important;
+    padding: 7px !important;
   }
 }
 #hero {
@@ -317,7 +325,7 @@ body {
 /* Timeline */
 
 .timeline-with-icons {
-  border-left: 4px solid hsl(261, 81%, 86%);
+  border-left: 2px solid var(--primary-color);
   position: relative;
   list-style: none;
 }
@@ -334,12 +342,12 @@ body {
 
 .timeline-with-icons .timeline-icon {
   position: absolute;
-  left: -50px;
-  background-color: #d3bef8;
+  left: -43px;
+  background-color: var(--primary-color);
   color: var(--primary-color);
   border-radius: 50%;
-  height: 31px;
-  width: 31px;
+  height: 19px;
+  width: 19px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -573,8 +581,8 @@ textarea {
 }
 
 .icon-toast {
-  width: 22px!important;
-  height: 22px!important;
+  width: 22px !important;
+  height: 22px !important;
 }
 
 .icon-toast i {
