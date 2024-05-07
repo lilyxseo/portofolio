@@ -447,7 +447,7 @@ body {
 }
 
 .img-project {
-  border-bottom: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .tech-project img {
