@@ -471,6 +471,7 @@ body {
   color: var(--font);
   padding: 4px;
   border-radius: 3px;
+  font-size: 1rem;
 }
 
 .icon-project:hover {
