@@ -307,6 +307,11 @@ body {
   font-size: 17px;
 }
 
+.offcanvas-body .navbar-nav .nav-link:active,
+.offcanvas-body .navbar-nav .nav-link:focus {
+  color: var(--secondary-color) /* warna yang diinginkan saat tautan dalam keadaan aktif */;
+}
+
 /* Navbar */
 
 #navbar {
@@ -468,6 +473,15 @@ body {
   margin: 0 auto;
 }
 
+.nav-content {
+  transition: transform 0.5s ease;
+}
+
+.nav-content:hover {
+  transform: scale(1.015);
+  border: 2px solid var(--primary-color);
+}
+
 .nav-tabs .nav-link.active {
   border: none;
   background-color: transparent;
@@ -527,6 +541,8 @@ body {
 
 .img-project {
   border-bottom: 1px solid var(--primary-color);
+  padding: 4px;
+  background-color: var(--body);
 }
 
 .tech-project img {
@@ -556,6 +572,21 @@ body {
 .icon-project:hover {
   background-color: #bebebe;
 }
+
+.card-project {
+  transition: transform 0.5s ease;
+}
+
+.card-project:hover {
+  transform: scale(1.015);
+  border: 2.8px solid var(--primary-color);
+}
+
+.card-project:hover .img-project {
+  border-bottom: 2.8px solid var(--primary-color);
+
+}
+
 
 /* Contact */
 
