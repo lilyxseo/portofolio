@@ -271,7 +271,7 @@ body {
 
   .navbar-nav .nav-link.active {
     color: var(--secondary-color) !important;
-    text-decoration: none!important;
+    text-decoration: none !important;
   }
 
   .navbar-nav .nav-link.active:hover {
@@ -300,7 +300,8 @@ body {
   height: 80vh;
 }
 
-.navbar-nav .nav-item, .nav-item a {
+.navbar-nav .nav-item,
+.nav-item a {
   color: var(--navtext);
   font-weight: 600;
   font-size: 17px;
@@ -318,16 +319,18 @@ body {
   text-decoration: none;
 }
 
-.navbar-nav .nav-item a::before,
-.navbar-nav .nav-item a::after {
-  content: '';
-  position: absolute;
-  bottom: 7px;
-  left: 31%;
-  width: 0;
-  height: 2px;
-  background-color: var(--secondary-color);
-  transition: width 0.3s ease;
+@media only screen and (min-width: 768px) {
+  .navbar-nav .nav-item a::before,
+  .navbar-nav .nav-item a::after {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    left: 31%;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+  }
 }
 
 .navbar-nav .nav-item a::before {
@@ -354,7 +357,7 @@ body {
 .navbar-nav .nav-item a:hover::after {
   text-decoration: none;
 }
-  
+
 .navbar-nav .nav-item a:hover::before {
   animation: underlineLeft 0.3s forwards;
 }
