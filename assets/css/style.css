@@ -541,7 +541,6 @@ body {
 
 .img-project {
   border-bottom: 1px solid var(--primary-color);
-  padding: 4px;
   background-color: var(--body);
 }
 
