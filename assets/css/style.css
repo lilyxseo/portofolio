@@ -403,7 +403,7 @@ body {
 
 .timeline-with-icons {
   border-left: 2px solid var(--primary-color);
-  clip-path: polygon(0 7px, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(-50px 7.5px, 100% 0, 100% 100%, 0 100%);
   position: relative;
   list-style: none;
 }
