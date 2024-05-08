@@ -403,7 +403,7 @@ body {
 
 .timeline-with-icons {
   border-left: 2px solid var(--primary-color);
-  clip-path: polygon(-50px 7.5px, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(-50px 8px, 100% 0, 100% 100%, 0 100%);
   position: relative;
   list-style: none;
 }
@@ -420,7 +420,7 @@ body {
 
 .timeline-with-icons .timeline-icon {
   position: absolute;
-  left: -43px;
+  left: -42.5px;
   top: 7px;
   background-color: var(--primary-color);
   color: var(--primary-color);
