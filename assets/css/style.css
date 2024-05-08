@@ -68,7 +68,13 @@ body {
 }
 
 .typewrite {
-  background-image: linear-gradient(to bottom right, #4263eb, #f03e3e);
+  /* background-image: linear-gradient(to bottom right, #1ea3ff, #833ef0); */
+  background-image: linear-gradient(
+    260.16deg,
+    #1c99fe 9.94%,
+    #7644ff 54.82%,
+    #fd4766 95.56%
+  );
   color: transparent;
   -webkit-background-clip: text;
 }
@@ -306,26 +312,94 @@ body {
   background-color: var(--navter);
 }
 
+.nav-item a {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-item a::before,
+.nav-item a::after {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  left: 31%;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-item a::before {
+  transform: translateX(-50%);
+}
+
+.nav-item a::after {
+  transform: translateX(50%);
+}
+
+.nav-item a:hover::before {
+  width: calc(50% - 7px); /* 7px is half of text-underline-offset */
+}
+
+.nav-item a:hover::after {
+  width: calc(50% - 7px);
+}
+
 .nav-item a:hover {
   color: var(--secondary-color);
 }
 
+.nav-item a:hover::before,
+.nav-item a:hover::after {
+  text-decoration: none;
+}
+  
+.nav-item a:hover::before {
+  animation: underlineLeft 0.3s forwards;
+}
+
+.nav-item a:hover::after {
+  animation: underlineRight 0.3s forwards;
+}
+
+@keyframes underlineLeft {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(50% - 7px);
+  }
+}
+
+@keyframes underlineRight {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(50% - 7px);
+  }
+}
 .navbar-nav {
   gap: 1rem;
 }
 
 .navbar-nav .nav-link.active {
   color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+  text-decoration-color: var(--secondary-color);
 }
 
 .navbar-nav .nav-link.active:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 /* Timeline */
 
 .timeline-with-icons {
   border-left: 2px solid var(--primary-color);
+  clip-path: polygon(0 7px, 100% 0, 100% 100%, 0 100%);
   position: relative;
   list-style: none;
 }
@@ -343,6 +417,7 @@ body {
 .timeline-with-icons .timeline-icon {
   position: absolute;
   left: -43px;
+  top: 7px;
   background-color: var(--primary-color);
   color: var(--primary-color);
   border-radius: 50%;
@@ -351,6 +426,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 99999;
 }
 
 .timeline-item ul {
