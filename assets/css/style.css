@@ -108,17 +108,17 @@ body {
   border: 2px solid var(--primary-color) !important;
 }
 
-.btn-cv:active a {
+.btn-cv:active h7 {
   color: var(--primary-color) !important;
 }
 
-.btn-cv a {
+.btn-cv h7 {
   padding: 10px 5px;
   text-decoration: none;
   color: var(--primary-color);
 }
 
-.btn-cv:hover a {
+.btn-cv:hover h7 {
   color: #fff;
 }
 
