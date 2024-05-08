@@ -271,6 +271,7 @@ body {
 
   .navbar-nav .nav-link.active {
     color: var(--secondary-color) !important;
+    text-decoration: none!important;
   }
 
   .navbar-nav .nav-link.active:hover {
@@ -299,7 +300,7 @@ body {
   height: 80vh;
 }
 
-.nav-item a {
+.navbar-item, .nav-item a {
   color: var(--navtext);
   font-weight: 600;
   font-size: 17px;
@@ -312,13 +313,13 @@ body {
   background-color: var(--navter);
 }
 
-.nav-item a {
+.navbar-item a {
   position: relative;
   text-decoration: none;
 }
 
-.nav-item a::before,
-.nav-item a::after {
+.navbar-item a::before,
+.navbar-item a::after {
   content: '';
   position: absolute;
   bottom: 7px;
@@ -329,36 +330,36 @@ body {
   transition: width 0.3s ease;
 }
 
-.nav-item a::before {
+.navbar-item a::before {
   transform: translateX(-50%);
 }
 
-.nav-item a::after {
+.navbar-item a::after {
   transform: translateX(50%);
 }
 
-.nav-item a:hover::before {
+.navbar-item a:hover::before {
   width: calc(50% - 7px); /* 7px is half of text-underline-offset */
 }
 
-.nav-item a:hover::after {
+.navbar-item a:hover::after {
   width: calc(50% - 7px);
 }
 
-.nav-item a:hover {
+.navbar-item a:hover {
   color: var(--secondary-color);
 }
 
-.nav-item a:hover::before,
-.nav-item a:hover::after {
+.navbar-item a:hover::before,
+.navbar-item a:hover::after {
   text-decoration: none;
 }
   
-.nav-item a:hover::before {
+.navbar-item a:hover::before {
   animation: underlineLeft 0.3s forwards;
 }
 
-.nav-item a:hover::after {
+.navbar-item a:hover::after {
   animation: underlineRight 0.3s forwards;
 }
 
@@ -500,7 +501,73 @@ body {
 .nav-tabs {
   border-bottom: 1px solid var(--primary-color);
 }
+.nav-item a {
+  position: relative;
+  text-decoration: none;
+}
 
+.nav-item a::before,
+.nav-item a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 31%;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-item a::before {
+  transform: translateX(-50%);
+}
+
+.nav-item a::after {
+  transform: translateX(50%);
+}
+
+.nav-item a:hover::before {
+  width: calc(50% - 7px); /* 7px is half of text-underline-offset */
+}
+
+.nav-item a:hover::after {
+  width: calc(50% - 7px);
+}
+
+.nav-item a:hover {
+  color: var(--secondary-color);
+}
+
+.nav-item a:hover::before,
+.nav-item a:hover::after {
+  text-decoration: none;
+}
+  
+.nav-item a:hover::before {
+  animation: underlineLeft 0.3s forwards;
+}
+
+.navbar-item a:hover::after {
+  animation: underlineRight 0.3s forwards;
+}
+
+@keyframes underlineLeft {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(50% - 7px);
+  }
+}
+
+@keyframes underlineRight {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(50% - 7px);
+  }
+}
 /* Intro */
 
 .intro h1 {
