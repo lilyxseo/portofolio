@@ -5,8 +5,10 @@ secondary : var(--secondary-color)
 another : var(--navterder) 
 */
 :root {
-  --primary-color: #7950f2;
-  --secondary-color: #a88bff;
+  /* --primary-color: #7950f2;
+  --secondary-color: #a88bff; */
+  --primary-color: #ff00b3;
+  --secondary-color: #ef27b3;
   --body: #f8f9fa;
   --navter: #fff;
   --navterder: #e9ecef;
@@ -309,7 +311,8 @@ body {
 
 .offcanvas-body .navbar-nav .nav-link:active,
 .offcanvas-body .navbar-nav .nav-link:focus {
-  color: var(--secondary-color) /* warna yang diinginkan saat tautan dalam keadaan aktif */;
+  color: var(--secondary-color)
+    /* warna yang diinginkan saat tautan dalam keadaan aktif */;
 }
 
 /* Navbar */
@@ -583,9 +586,7 @@ body {
 
 .card-project:hover .img-project {
   border-bottom: 2.8px solid var(--primary-color);
-
 }
-
 
 /* Contact */
 
@@ -658,7 +659,7 @@ body {
 .form-control:focus {
   border-color: var(--primary-color);
   background-color: var(--navter);
-  box-shadow: 0 0 0 0.2rem #ccbbff;
+  box-shadow: 0 0 0 0.2rem transparent;
 }
 
 textarea {
