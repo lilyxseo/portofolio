@@ -774,6 +774,10 @@ textarea {
   height: 0;
 }
 
+#switchLabel {
+  opacity: 0;
+}
+
 .slider {
   position: absolute;
   cursor: pointer;
