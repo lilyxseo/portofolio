@@ -10,12 +10,18 @@ another : var(--navterder)
   --secondary-color: #a88bff; */
 
   /* Biru */
-  --primary-color: #1b85ff;
-  --secondary-color: #54a3fc;
+  /* --primary-color: #1b85ff;
+  --secondary-color: #54a3fc; */
 
   /* Pink */
   /* --primary-color: #ff00b3;
   --secondary-color: #fc54ca; */
+
+  /* Hijau */
+  --primary-color: #0fe202;
+  --secondary-color: #43f653;
+
+  
   --body: #f8f9fa;
   --navter: #fff;
   --navterder: #e9ecef;
