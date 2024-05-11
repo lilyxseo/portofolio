@@ -5,10 +5,17 @@ secondary : var(--secondary-color)
 another : var(--navterder) 
 */
 :root {
+  /* Ungu */
   /* --primary-color: #7950f2;
   --secondary-color: #a88bff; */
-  --primary-color: #ff00b3;
-  --secondary-color: #fc54ca;
+
+  /* Biru */
+  --primary-color : #0077ff;
+  --secondary-color: #54a3fc;
+
+  /* Pink */
+  /* --primary-color: #ff00b3;
+  --secondary-color: #fc54ca; */
   --body: #f8f9fa;
   --navter: #fff;
   --navterder: #e9ecef;
