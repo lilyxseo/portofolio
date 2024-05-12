@@ -160,28 +160,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-$(document).ready(function () {
-  // Inisialisasi Parsley pada formulir dengan id telegramForm
-  $("#telegramForm").parsley();
-
-  // Tambahkan pesan kesalahan kustom
-  $("#name").parsley().addConstraint("required", {
-    message: "Please enter your name",
-  });
-
-  $("#email").parsley().addConstraint("required", {
-    message: "Please enter your email",
-  });
-
-  $("#message").parsley().addConstraint("required", {
-    message: "Please enter your message",
-  });
-
-  // Tangani pengiriman formulir
-  $("#telegramForm").on("submit", function (e) {
-    // Validasi formulir menggunakan Parsley
-    if (!$("#telegramForm").parsley().validate()) {
-      e.preventDefault(); // Hentikan pengiriman formulir jika tidak valid
-    }
-  });
-});
+window.alert = function () {};
