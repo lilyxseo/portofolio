@@ -137,6 +137,10 @@ body {
   color: #fff;
 }
 
+.cv {
+  outline: none;
+}
+
 .my-pic {
   border: 5px solid var(--secondary-color);
   padding: 10px;
