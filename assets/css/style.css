@@ -890,3 +890,15 @@ textarea {
 .input:checked + .slider:before {
   transform: translateX(23px);
 }
+
+.parsley-errors-list {
+  list-style: none;
+  color: red;
+  padding: 0;
+  margin: 0;
+}
+
+.parsley-error {
+  color: #dc3545;
+  border-color: #dc3545 !important;
+}

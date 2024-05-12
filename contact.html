@@ -113,36 +113,39 @@
                 <h1 class="mb-3 fw-bold">Message</h1>
             </div>
             <div class="col-12">
-                <form id="telegramForm">
+                <form id="telegramForm" data-parsley-validate>
                     <div class="row">
                         <div class="mb-3 col-xxl-6 col-xl-6 col-12">
-                            <label for="name" class="form-label fw-semibold">Name</label>
-                            <span class="text-danger">*</span>
-                            <input type="text" class="form-control " id="name" name="nama" placeholder="Nama anda"
-                                autocomplete="nama" required>
+                            <label for="name" class="form-label fw-semibold">Name <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="name" name="nama" placeholder="Nama anda"
+                                autocomplete="nama" required data-parsley-required-message="Please enter your name">
                         </div>
                         <div class="mb-3 col-xxl-6 col-xl-6 col-12">
-                            <label for="email" class="form-label fw-semibold">Email</label>
-                            <span class="text-danger">*</span>
+                            <label for="email" class="form-label fw-semibold">Email <span
+                                    class="text-danger">*</span></label>
                             <input type="email" class="form-control" id="email" name="email" placeholder="Email anda"
-                                autocomplete="email" required>
+                                autocomplete="email" required data-parsley-required-message="Please enter your email">
                         </div>
                     </div>
                     <div class="mb-3 col-12">
-                        <label for="message" class="form-label fw-semibold">Message</label>
-                        <span class="text-danger">*</span>
+                        <label for="message" class="form-label fw-semibold">Message <span
+                                class="text-danger">*</span></label>
                         <textarea class="form-control" id="message" name="pesan" rows="4"
-                            placeholder="Tulis pesan anda disini..." autocomplete="pesan" required></textarea>
+                            placeholder="Tulis pesan anda disini..." autocomplete="pesan" required
+                            data-parsley-required-message="Please enter your message"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-message">
+                    <button type="submit" class="btn btn-message" id="sendMessageButton">
                         <span class="fw-semibold" id="buttonText">Kirim</span>
                         <span id="loadingSpinner" class="fa-regular fa-spinner fa-spin d-none"></span>
                         <i id="normalIcon" class="fa-regular fa-paper-plane"></i>
                     </button>
                 </form>
+
             </div>
         </div>
     </div>
+
 
     <!-- Toast -->
     <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -163,6 +166,8 @@
     </footer>
 
     <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" async></script>
     <script src="https://www.bydrz.com/assets/js/script.js" defer></script>
