@@ -631,7 +631,8 @@ body {
   border: 1px solid var(--secondary-color);
 }
 
-.btn-message:hover {
+.btn-message:hover,
+.btn-message:focus {
   color: #fff;
   background-color: var(--secondary-color);
 }
