@@ -334,10 +334,6 @@ body {
   background-color: var(--navter);
 }
 
-#nav-link:focus {
-  box-shadow: 0 0 0 0.2rem transparent;
-}
-
 .navbar-nav .nav-item a {
   position: relative;
   text-decoration: none;
@@ -417,6 +413,7 @@ body {
   text-decoration-thickness: 2px;
   text-underline-offset: 7px;
   text-decoration-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.2rem transparent;
 }
 
 .navbar-nav .nav-link.active:hover {
