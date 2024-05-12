@@ -111,10 +111,17 @@ body {
   padding: 8px 20px;
 }
 
-.btn-cv:hover,
+.btn-cv:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
 .btn-cv:focus {
   color: #fff;
   background-color: var(--primary-color);
+}
+.btn-cv:focus h7 {
+  color: #fff;
 }
 
 .btn-cv:active {
