@@ -513,6 +513,7 @@ body {
 .nav-tabs .nav-link.active {
   border: none;
   background-color: transparent;
+  box-shadow: 0 0 0 0.2rem transparent;
   color: var(--primary-color);
   padding-top: 5px;
   padding-bottom: 10px;
