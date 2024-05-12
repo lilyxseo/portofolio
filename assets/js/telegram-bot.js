@@ -1,5 +1,13 @@
 // Fungsi untuk mengirim pesan ke Telegram
 async function sendMessageToTelegram() {
+  // Menampilkan ikon loading
+  const loadingSpinner = document.getElementById("loadingSpinner");
+  loadingSpinner.classList.remove("d-none");
+
+  // Menyembunyikan ikon kirim pesan normal
+  const normalIcon = document.getElementById("normalIcon");
+  normalIcon.style.display = "none";
+
   // Mengambil nilai dari input formulir
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
@@ -8,6 +16,12 @@ async function sendMessageToTelegram() {
   // Validasi sederhana, pastikan nilai name, email, dan message tidak kosong
   if (!name || !email || !message) {
     alert("Silakan lengkapi semua kolom formulir.");
+
+    // Sembunyikan ikon loading
+    loadingSpinner.classList.add("d-none");
+
+    // Tampilkan kembali ikon kirim pesan normal
+    normalIcon.style.display = "inline";
     return;
   }
 
@@ -47,24 +61,24 @@ LX Zone
     if (response.ok) {
       // Menampilkan toast pesan berhasil
       showToast("Pesan berhasil terkirim, terima kasih sudah menghubungi saya");
-
-      // Membersihkan formulir setelah pesan berhasil terkirim
-      document.getElementById("telegramForm").reset();
     } else {
       // Menampilkan toast pesan gagal bersama dengan pesan kesalahan dari respons
       showToast(
         `Gagal mengirim pesan ke Telegram. ${responseData.description}`
       );
-
-      // Membersihkan formulir setelah pesan berhasil terkirim
-      document.getElementById("telegramForm").reset();
     }
   } catch (error) {
     console.error("Error sending message:", error);
     // Menampilkan toast pesan gagal
     showToast("Terjadi kesalahan saat mengirim pesan ke Telegram.");
+  } finally {
+    // Menyembunyikan ikon loading setelah pengiriman selesai
+    loadingSpinner.classList.add("d-none");
 
-    // Membersihkan formulir setelah pesan berhasil terkirim
+    // Menampilkan kembali ikon kirim pesan normal setelah pengiriman selesai
+    normalIcon.style.display = "inline";
+
+    // Membersihkan formulir setelah pengiriman selesai
     document.getElementById("telegramForm").reset();
   }
 }
