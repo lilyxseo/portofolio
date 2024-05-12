@@ -635,7 +635,7 @@ body {
   color: var(--secondary-color);
 }
 
-.sosmed ul li a:hover {
+.sosmed ul li a:hover,.sosmed ul li a:focus {
   color: var(--primary-color);
 }
 
