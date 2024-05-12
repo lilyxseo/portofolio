@@ -633,9 +633,11 @@ body {
 .sosmed ul li a {
   text-decoration: none;
   color: var(--secondary-color);
+  outline: none;
 }
 
-.sosmed ul li a:hover,.sosmed ul li a:focus {
+.sosmed ul li a:hover,
+.sosmed ul li a:focus {
   color: var(--primary-color);
 }
 
