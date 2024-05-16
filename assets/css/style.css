@@ -6,12 +6,12 @@ another : var(--navterder)
 */
 :root {
   /* Ungu */
-  /* --primary-color: #7950f2;
-  --secondary-color: #a88bff; */
+  --primary-color: #7950f2;
+  --secondary-color: #a88bff;
 
   /* Biru */
-  --primary-color: #1b85ff;
-  --secondary-color: #54a3fc;
+  /* --primary-color: #1b85ff;
+  --secondary-color: #54a3fc; */
 
   /* Pink */
   /* --primary-color: #ff00b3;
