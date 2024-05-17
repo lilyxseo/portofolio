@@ -248,11 +248,11 @@ body {
     font-size: 2em !important;
   }
 
-  .intro h4 {
+  .intro h2 {
     font-size: 1.3em !important;
   }
 
-  .intro h5 {
+  .intro h3 {
     font-size: 1em !important;
     text-align: center !important;
   }
@@ -553,11 +553,11 @@ body {
   font-size: 3em;
 }
 
-.intro h4 {
+.intro h2 {
   font-size: 1.5em;
 }
 
-.intro h5 {
+.intro h3 {
   font-size: 1.2em;
   text-align: center;
 }
