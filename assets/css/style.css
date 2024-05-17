@@ -449,7 +449,7 @@ body {
   position: absolute;
   display: block;
   top: 0;
-} 
+}
 
 .timeline-with-icons .timeline-icon {
   position: absolute;
@@ -637,13 +637,13 @@ ul li.timeline-item h2.fw-bold.pt-1 {
 
 .sosmed ul li a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   outline: none;
 }
 
 .sosmed ul li a:hover,
 .sosmed ul li a:focus {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .btn-message {
