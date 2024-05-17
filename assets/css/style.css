@@ -637,13 +637,13 @@ ul li.timeline-item h2.fw-bold.pt-1 {
 
 .sosmed ul li a {
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   outline: none;
 }
 
 .sosmed ul li a:hover,
 .sosmed ul li a:focus {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .btn-message {
