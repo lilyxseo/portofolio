@@ -120,7 +120,7 @@ body {
   color: #fff;
   background-color: var(--primary-color);
 }
-.btn-cv:focus h7 {
+.btn-cv:focus span {
   color: #fff;
 }
 
@@ -130,17 +130,17 @@ body {
   border: 2px solid var(--primary-color) !important;
 }
 
-.btn-cv:active h7 {
+.btn-cv:active span {
   color: var(--primary-color) !important;
 }
 
-.btn-cv h7 {
+.btn-cv span {
   padding: 10px 5px;
   text-decoration: none;
   color: var(--primary-color);
 }
 
-.btn-cv:hover h7 {
+.btn-cv:hover span {
   color: #fff;
 }
 
