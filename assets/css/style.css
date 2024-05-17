@@ -471,7 +471,7 @@ body {
   list-style: inside;
 }
 
-ul li.timeline-item h5.fw-bold.pt-1 {
+ul li.timeline-item h2.fw-bold.pt-1 {
   font-size: 1.25rem !important;
 }
 
