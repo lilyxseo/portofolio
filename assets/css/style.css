@@ -108,14 +108,7 @@ body {
   color: var(--primary-color);
   background-color: var(--navter);
   border: 2px solid var(--primary-color);
-  padding: 16px 24px; /* Memperbesar padding */
-  display: inline-flex; /* Membuat tombol lebih fleksibel */
-  align-items: center;
-  justify-content: center;
-  min-height: 48px; /* Tinggi minimum */
-  min-width: 100px; /* Lebar minimum */
-  cursor: pointer;
-  text-align: center;
+  padding: 8px 24px;
 }
 
 .btn-cv:hover {
