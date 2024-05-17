@@ -449,7 +449,7 @@ body {
   position: absolute;
   display: block;
   top: 0;
-}
+} 
 
 .timeline-with-icons .timeline-icon {
   position: absolute;
@@ -469,6 +469,10 @@ body {
 .timeline-item ul {
   padding-left: 0px;
   list-style: inside;
+}
+
+ul li.timeline-item h5.fw-bold.pt-1 {
+  font-size: 1.25rem !important;
 }
 
 /* Navtabs */
