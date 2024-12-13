@@ -35,7 +35,7 @@ async function sendMessageToTelegram() {
 
   // Modifikasi teks untuk menggunakan format Markdown (membuat teks bold)
   const text = `
-  Message from bydrz.com
+  Message from bydrz.me
 
 Nama: ${name}
 Email: ${email}
